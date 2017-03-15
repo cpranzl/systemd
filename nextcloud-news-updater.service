@@ -1,0 +1,11 @@
+[Unit]
+Description=Nextcloud News Updater
+After=default.target
+
+[Service]
+Type=simple
+User=www-data
+ExecStart= /usr/bin/nextcloud-news-updater --apilevel v1-2 /var/www/nextcloud
+
+[Install]
+WantedBy=default.target
